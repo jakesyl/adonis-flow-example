@@ -1,12 +1,12 @@
-'use strict'
+'use strict';
 
-const Route = use('Route')
-const Config = use('Config')
-const swaggerJSDoc = use('swagger-jsdoc')
+const Route = use('Route');
+const Config = use('Config');
+const swaggerJSDoc = use('swagger-jsdoc');
 /**
  * Swagger jsDoc
  */
-Route.get('api-specs', async ({ request, response }) => {
+Route.get('api-specs', async () => {
   const options = {
     swaggerDefinition: {
       info: {
@@ -15,9 +15,7 @@ Route.get('api-specs', async ({ request, response }) => {
       },
       host: `${Config.get('host')}:${Config.get('port')}`,
       basePath: '/api',
-      security: [{
-        JWT: []
-      }],
+      security: [{ JWT: [] }],
       securityDefinitions: {
         JWT: {
           type: 'apiKey',
@@ -31,17 +29,15 @@ Route.get('api-specs', async ({ request, response }) => {
       './app/Routes/*.js',
       './app/Models/*.js'
     ] // Path to the API docs
-  }
+  };
   // Initialize swagger-jsdoc -> returns validated swagger spec in json format
-  return swaggerJSDoc(options)
-}).as('swaggerSpec')
+  return swaggerJSDoc(options);
+}).as('swaggerSpec');
 
 /**
  * Swagger UI
  */
-Route.get('docs', ({ view }) => {
-  return view.render('swagger')
-}).as('swaggerUI')
+Route.get('docs', ({ view }) => view.render('swagger')).as('swaggerUI');
 
 /**
  * @swagger
