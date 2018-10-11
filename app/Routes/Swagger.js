@@ -19,11 +19,11 @@ Route.get('api-specs', async ({ request, response }) => {
         JWT: []
       }],
       securityDefinitions: {
-        'JWT': {
-          'type': 'apiKey',
-          'description': "add 'Bearer ' before jwt token",
-          'name': 'Authorization',
-          'in': 'header'
+        JWT: {
+          type: 'apiKey',
+          description: "add 'Bearer ' before jwt token",
+          name: 'Authorization',
+          in: 'header'
         }
       }
     },
