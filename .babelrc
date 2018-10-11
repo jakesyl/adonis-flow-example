@@ -1,0 +1,15 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "10.5"
+      }
+    }],
+    "flow"
+    ],
+  "plugins": [
+    "syntax-flow",
+    "tcomb",
+    "transform-flow-strip-types"
+  ]
+}

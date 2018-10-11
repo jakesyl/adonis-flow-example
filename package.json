@@ -1,0 +1,53 @@
+{
+  "name": "adonis-fullstack-app",
+  "version": "4.1.0",
+  "adonis-version": "4.1.0",
+  "description": "The fullstack application boilerplate for Adonisjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ace test",
+    "dev": "adonis serve --dev --debug",
+    "flow": "flow",
+    "flow:deps": "flow-typed install",
+    "babel:build": "babel appFlow -d app",
+    "babel:watch": "babel appFlow --watch -d app"
+  },
+  "keywords": [
+    "adonisjs",
+    "adonis-app"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@adonisjs/ace": "^5.0.8",
+    "@adonisjs/auth": "^3.0.7",
+    "@adonisjs/bodyparser": "^2.0.5",
+    "@adonisjs/cors": "^1.0.7",
+    "@adonisjs/fold": "^4.0.9",
+    "@adonisjs/framework": "^5.0.9",
+    "@adonisjs/ignitor": "^2.0.8",
+    "@adonisjs/lucid": "^6.1.3",
+    "@adonisjs/session": "^1.0.27",
+    "@adonisjs/shield": "^1.0.8",
+    "swagger-jsdoc": "^3.2.3"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-eslint": "8.2.5",
+    "babel-plugin-tcomb": "0.3.26",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-flow": "6.23.0",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb-base": "13.0.0",
+    "eslint-plugin-flowtype": "2.49.3",
+    "eslint-plugin-import": "2.13.0",
+    "flow-bin": "0.75.0",
+    "flow-typed": "2.4.0",
+    "tcomb": "3.2.27"
+  },
+  "autoload": {
+    "App": "./app"
+  }
+}
