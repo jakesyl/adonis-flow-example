@@ -49,7 +49,7 @@
     "tcomb": "3.2.27"
   },
   "_moduleAliases": {
-    "App" : "./app"
+    "App": "./app"
   },
   "autoload": {
     "App": "./app"
