@@ -7,6 +7,10 @@ const Hash = use('Hash');
 const Model = use('Model');
 
 class User extends Model {
+  id:number
+  email:string
+  password:string
+
   static boot () {
     super.boot();
 
